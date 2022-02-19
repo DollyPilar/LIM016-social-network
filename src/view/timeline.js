@@ -4,6 +4,7 @@ import {
   deletePost,
   getPost,
   getPosts,
+  getPostByUser,
 } from '../firebase/firestore/firestore-add.js';
 import {updatePost, addLike} from '../firebase/firestore/fb-test.js';
 
@@ -30,9 +31,11 @@ const addPost = (e) => {
   const postDescriptionVerified = postDescription.replace(/\s+/g, '');
   // console.log(postDescriptionVerified);
   const date = new Date();
-  const postDate = date.toISOString();
+  // const postDate = date.toISOString();
 
-  // console.log(date.toISOString());
+  const postDate = date.getTime();
+
+  console.log(postDate);
 
   if (postDescriptionVerified !== '') {
     savePost(
@@ -43,6 +46,11 @@ const addPost = (e) => {
 
 
 export const timeline = () => {
+  if (userPhoto == null) {
+    userPhoto = './img/avatar.png';
+  } else {
+    userPhoto;
+  }
   const showTimeline = `
   <form id="form" class="postForm">
     
@@ -79,8 +87,18 @@ export const timeline = () => {
       alert('Inicia sesión para disfrutar de nuestro contenido');
     } else {
       const posts = await getPosts();
+      const postsData = posts.docs;
+      // console.log(posts);
+      console.log(postsData);
 
-      console.log(posts);
+      const postsByUser = await getPostByUser();
+      console.log(postsByUser);
+      const querySnapshot = await getPosts(postsByUser);
+      querySnapshot.forEach((doc) => {
+        if (postUser == doc.data().user) {
+          console.log(doc.id, ' => ', doc.data());
+        }
+      });
 
       await onGetPosts((callback) => {
         allPosts = '';
@@ -112,8 +130,10 @@ export const timeline = () => {
           </div>
           <div class="iconPosts">
           
-            <i class="fas fa-trash-alt btnDelete iconPost" data-id="${doc.id}"></i>
-            <i class="fas fa-pencil-alt btnEdit iconPost" data-id="${doc.id}"></i>
+            <i class="fas fa-trash-alt btnDelete iconPost"
+            data-id="${doc.id}"></i>
+            <i class="fas fa-pencil-alt btnEdit iconPost"
+            data-id="${doc.id}"></i>
             <div class="divbtnLike">
               <i class="fas fa-heart btnLike iconPost" data-id="${doc.id}"></i>
               <span class='postsLike'
@@ -221,12 +241,6 @@ export const timeline = () => {
             }
           });
         });
-
-        
-
-
-
-
       });
     }
   };

@@ -1,5 +1,19 @@
+// import {
+//   updateProfile, updateUser,
+// } from '../firebase/firestore/firestore-add.js';
+import {updateUserName} from '../firebase/auth/auth_signup_password.js';
 
-const updateUser = () => {
+
+let userUpdateProfile;
+let emailUpdateProfile;
+
+export const currentUpdateUser = (user, email) => {
+  userUpdateProfile = user;
+  emailUpdateProfile = email;
+  console.log(userUpdateProfile);
+};
+
+const updateUserProfile = () => {
   const UpdateProfile = ` 
   <div class="conteinerGeneral">
     <div class="updateBoX">
@@ -13,16 +27,13 @@ const updateUser = () => {
           <input type="file" id="userPhoto">
           </div>
           <div class="form-control">
-           <input type="text" placeholder=" Nombre de usuario">
+           <input type="text" id="name" placeholder=" Nombre de usuario">
           </div>
           <div class="form-control">
-            <input type="email" placeholder=" Correo Electrónico">
-          </div>
-          <div class="form-control">
-            <input type="text" placeholder=" Númeno de teléfono">
+            <p> ${emailUpdateProfile} </p>
           </div>
 
-          <button id="btnSaveProfile" class="button">Guardar</button>
+          <button id="btnSaveProfile" class="button">Actualizar</button>
         </div>
       </form>
     </div>
@@ -31,50 +42,23 @@ const updateUser = () => {
   divElemt.setAttribute('class', 'flexSection');
   divElemt.innerHTML = UpdateProfile;
 
-  //   divElemt.querySelector('#btnSaveProfile')
-  //       .addEventListener('click', registerUser);
+  divElemt.querySelector('#btnSaveProfile')
+      .addEventListener('click', registerUser);
 
   return divElemt;
 };
 
-export default updateUser;
+export default updateUserProfile;
 
-// const updateUser = () => {
-//   const UpdateProfile = `
-//   <div class="conteinerGeneral">
-//     <div class="updateBoX">
+export const registerUser = (e) => {
+  e.preventDefault();
 
-//       <h2 class="title">Editar perfil</h2>
-//       <form>
-//         <div id="formProfile" class="formProfile">
-//           <div class="formProfileControl">
-//           <label>Cambiar foto de perfil
-//           </label>
-//           <input type="file" id="userPhoto">
-//           </div>
-//           <div class="form-control">
-//            <input type="text" placeholder=" Nombre de usuario">
-//           </div>
-//           <div class="form-control">
-//             <input type="email" placeholder=" Correo Electrónico">
-//           </div>
-//           <div class="form-control">
-//             <input type="text" placeholder=" Númeno de teléfono">
-//           </div>
+  // const name = e.target.closest('form').querySelector('#name').value;
+  const displayName = e.target.closest('form').querySelector('#name').value;
 
-//           <button id="btnSaveProfile" class="button">Guardar</button>
-//         </div>
-//       </form>
-//     </div>
-//   </div>`;
-//   const divElemt = document.createElement('div');
-//   divElemt.setAttribute('class', 'flexSection');
-//   divElemt.innerHTML = UpdateProfile;
+  // updateUser(name, displayName);
+  // updateProfile(userProfile);
+  updateUserName(displayName);
 
-//   //   divElemt.querySelector('#btnSaveProfile')
-//   //       .addEventListener('click', registerUser);
-
-//   return divElemt;
-// };
-
-// export default updateUser;
+  console.log(displayName, 'actualizó su perfil');
+};

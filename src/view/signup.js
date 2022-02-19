@@ -1,7 +1,5 @@
 import {createUser} from '../firebase/auth/auth_signup_password.js';
 import {googleAuth} from '../firebase/auth/auth_google_signin_popup.js';
-import {saveUser} from '../firebase/firestore/firestore-add.js';
-import {updateUser} from '../firebase/auth/auth_profile.js';
 
 
 export const backSignIn = () => {
@@ -80,8 +78,6 @@ export const registerUserNew = async (e) => {
     alert('Ups, debes completar todo el formulario');
   } else {
     await createUser(email, password);
-    await updateUser(name);
-    await saveUser(displayName, email, name);
   };
 };
 

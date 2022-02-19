@@ -13,7 +13,6 @@ const showSignOut = () => {
 const nav = () => {
   const showNav = `
 
-
     <nav class="tab-nav-container">
       <div class="tabTitle">
         <p>Queer Place</p>
@@ -36,8 +35,6 @@ const nav = () => {
   navElemt.querySelector('#home').addEventListener('click', showHome);
 
   navElemt.querySelector('#profile').addEventListener('click', showProfile);
-
- // navElemt.querySelector('#search').addEventListener('click', showSearch);
 
   navElemt.querySelector('#signOut').addEventListener('click', showSignOut);
 

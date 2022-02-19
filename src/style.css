@@ -380,6 +380,8 @@ html{
   height: 100%;
   overflow: hidden;
   resize: none;
+  white-space: pre-line;
+
 }
 .btnPost{
   margin-bottom: 10px;

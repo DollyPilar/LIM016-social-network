@@ -10,7 +10,7 @@ import {
   sendEmailVerification,
   updateProfile,
 } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js';
-import {getFirestore, collection, getDocs, getDoc, addDoc, query, orderBy, onSnapshot, deleteDoc, doc, updateDoc} from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js';
+import {getFirestore, collection, getDocs, getDoc, addDoc, query, orderBy, onSnapshot, deleteDoc, doc, updateDoc, where} from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCYMriyYLnj7mjwQ990OLhGaxulpUI6ONE',
@@ -26,10 +26,11 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider(app);
-// Init Services
-const db = getFirestore(app);// conexión a la base de datos
+// Init Services FireStore
+const db = getFirestore(app);
 
 export {
+  // Authentication
   app,
   auth,
   provider,
@@ -40,17 +41,17 @@ export {
   signInWithPopup,
   sendEmailVerification,
   updateProfile,
+  // Firestore
   db,
   collection,
   getDocs,
   getDoc,
   addDoc,
+  updateDoc,
   onSnapshot,
   deleteDoc,
   doc,
   query,
+  where,
   orderBy,
-  updateDoc,
 };
-
-

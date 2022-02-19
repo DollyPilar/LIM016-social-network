@@ -1,12 +1,8 @@
 import {googleAuth} from '../firebase/auth/auth_google_signin_popup.js';
 import {signIn} from '../firebase/auth/auth_signin_password.js';
 
-export const showHome = (user) => {
-  if (user !== null) {
-    window.location.hash = '#/home';
-  } else {
-    alert('Inicia sesión para disfrutar de nuestro contenido');
-  }
+export const showHome = () => {
+  window.location.hash = '#/home';
 };
 
 const SignIn = () => {
@@ -68,7 +64,7 @@ export const registerUser = (e) => {
 };
 
 export const showError = (error) => {
-  console.log(error);
+  console.error(error);
 
   const setErrorInput = (input, errorMessage) => {
     const formControl = input.parentElement;
@@ -101,7 +97,7 @@ export const showError = (error) => {
             'Toma un descanso y vuelve a intentarlo');
         break;
       default:
-        setErrorInput(email, 'lo sentimos, se ha producido un error');
+        setErrorInput(email, 'Lo sentimos, se ha producido un error');
         break;
     }
   }; typeError();

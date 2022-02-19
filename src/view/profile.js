@@ -1,16 +1,19 @@
-import updateUser from './updateUser.js';
-
-const update= () => {
+export const update= () => {
   window.location.hash = '#/update';
-  updateUser;
 };
 
+let userProfile;
+let nameProfile;
+let photoProfile;
 
-export const profile = (user) => {
-  console.log(user);
-  const nameProfile = user.name;
-  const emailProfile = user.email;
+export const currentUserProfile = (user, name, photo) => {
+  userProfile = user;
+  nameProfile = name;
+  photoProfile = photo;
+  console.log(userProfile);
+};
 
+export const profile = () => {
   const showProfile = ` 
   <div>
     <h2> Perfil</h2>
@@ -20,15 +23,13 @@ export const profile = (user) => {
   </div>
   <div>
     <p>${nameProfile}</p>
-    <p>${emailProfile}</p>
+    <p>${photoProfile}</p>
   </div>`;
   const divElemt = document.createElement('div');
   divElemt.setAttribute('class', 'flexSection');
   divElemt.innerHTML = showProfile;
 
-  divElemt
-      .querySelector('#btnEditProfile')
-      .addEventListener('click', update);
+  divElemt.querySelector('#btnEditProfile').addEventListener('click', update);
 
   return divElemt;
 };
