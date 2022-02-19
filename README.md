@@ -17,19 +17,19 @@ Los principales usuarios son aquellas personas que buscan una comunidad segura d
 Las edades de estas personas oscilan entre 18 y 30 años.
 
 b) ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
-•	Encontrar información que difunda lugares y servicios inclusivos.
-•	Iniciar sesión con Gmail o correo electrónico.
-•	 Poder publicar opiniones y calificar sus experiencias.
-•	Poder dar like, editar y eliminar un post
-•	Poder acceder a esta red social por medio del celular y no solo desde la pc o laptop.
+*	Encontrar información que difunda lugares y servicios inclusivos.
+*	Iniciar sesión con Gmail o correo electrónico.
+*	 Poder publicar opiniones y calificar sus experiencias.
+*	Poder dar like, editar y eliminar un post
+*	Poder acceder a esta red social por medio del celular y no solo desde la pc o laptop.
 
 c) ¿Cuáles son las secciones más relevantes que quieren ver en la red social?  
-•	Sección de publicaciones
-•	Edición de perfil
-•	Perfil de usuario
+*	Sección de publicaciones
+*	Edición de perfil
+*	Perfil de usuario
 
 d) ¿Cuándo utilizan o utilizarían el producto?
-•	Cuando tengan la necesidad de investigar acerca de la experiencia vivida en algún lugar o con algún servicio. Por otro lado, el dispositivo donde más la usarían, sería el teléfono móvil.
+*	Cuando tengan la necesidad de investigar acerca de la experiencia vivida en algún lugar o con algún servicio. Por otro lado, el dispositivo donde más la usarían, sería el teléfono móvil.
 
 ## 3. Historias de usuario
 | Historias de usuario | Detalle |
@@ -48,9 +48,10 @@ En base a los resultados obtenidos, diseñamos los siguientes prototipos:
 Para el diseño del prototipo inicial se empleó la herramienta Canva.
 
 * Vista Desktop
-*Timeline*
+
+* *Timeline*
 <p align center> 
-<img width="350" height="500" src="src/img/canva1.png">
+<img width="500" height="350" src="src/img/canva1.png">
 </p>
 
 *Perfil de usuario*
@@ -58,18 +59,31 @@ Para el diseño del prototipo inicial se empleó la herramienta Canva.
 <img width="500" height="350" src="src/img/canva2.png">
 </p> 
 
+
+* Vista Mobile
+
+* *Bienvenida y login
+<p align center> 
+<img width="500" height="350" src="src/img/canva3.png">
+</p> 
+
+* *Perfil de usuario
+<p align center> 
+<img width="500" height="350" src="src/img/canva4.png">
+</p> 
 ### 4.2 Prototipo de alta fidelidad
 Después de ya realizar el primer prototipo en Canva, procedimos a realizar el diseño de la red social en una herramienta mucho más avanzada como Figma. Para esto tomamos en cuenta la paleta de colores y el diseño sugerido en las Historias de usuario.
 
 * Vista Mobile
-*Welcome, login and register
+
+* *Welcome, login and register
 <p align center> 
-<img width="500" height="350" src="src/img/figma1.JPG">
+<img width="350" height="500" src="src/img/figma1.JPG">
 </p> 
 
-*Timeline and profile*
+* *Timeline and profile*
 <p align center> 
-<img width="500" height="350" src="src/img/figma2.JPG">
+<img width="350" height="500" src="src/img/figma2.JPG">
 </p> 
 
 ## 5.	Tecnologías empleadas
