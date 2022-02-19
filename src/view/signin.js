@@ -11,30 +11,30 @@ const SignIn = () => {
       <div class="SingUpBox">
         <p class="title" >¡BIENVENIDX!</p>
         <form id="formLogIn" class="formLogIn">
-          
+
           <div class="form-control">
             <input id="email" type="email" placeholder="Correo electrónico">
             <i class="far fa-times-circle"></i>
             <small></small>
           </div>
-          
+
           <div class="form-control">
-            <input minlength="5" id="password" type="password" 
+            <input minlength="5" id="password" type="password"
             placeholder="Contraseña">
             <i class="far fa-times-circle"></i>
             <small></small>
           </div>
           <button id="btnSignIn" class="button">Inicia sesión</button>
-          
+
           <a class="loginInGoogle" id="google"><img class="google" src="https://brandlogos.net/wp-content/uploads/2015/09/google-favicon-vector-400x400.png" alt="google"> Iniciar sesión con google</a>
           <p>¿No tienes cuenta?</p>
-          <a id="btnSignUp" 
+          <a id="btnSignUp"
           class="loginInCheckIn">Regístrate</a>
         </form>
- 
+
           <img src="./img/CB2.png" alt="img Welcome" class="imgRegistration">
 
-      </div>  
+      </div>
     </div>
   `;
   const divElemt = document.createElement('div');

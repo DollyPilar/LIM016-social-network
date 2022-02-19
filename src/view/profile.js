@@ -14,7 +14,7 @@ export const currentUserProfile = (user, name, photo) => {
 };
 
 export const profile = () => {
-  const showProfile = ` 
+  const showProfile = `
   <div>
     <h2> Perfil</h2>
   </div>

@@ -10,7 +10,6 @@ import {
   query,
   where,
   orderBy,
-  // updateDoc,
 } from '../configuraciones.js';
 
 export const savePost = (date, description, like, name, photo, user) => {

@@ -14,7 +14,7 @@ export const currentUpdateUser = (user, email) => {
 };
 
 const updateUserProfile = () => {
-  const UpdateProfile = ` 
+  const UpdateProfile = `
   <div class="conteinerGeneral">
     <div class="updateBoX">
 

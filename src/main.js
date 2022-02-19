@@ -1,4 +1,3 @@
-// Este es el punto de entrada de tu aplicacion
 import {changeView} from './view-controler/router.js';
 
 const init = () => {
@@ -9,5 +8,3 @@ const init = () => {
 };
 
 window.addEventListener('load', init);
-
-

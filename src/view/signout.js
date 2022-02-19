@@ -1,7 +1,7 @@
 import {signOutUser} from '../firebase/auth/auth_sign_out.js';
 
 const signOutPage = () => {
-  const showSignOut = ` 
+  const showSignOut = `
 
  <div>
     <button id="btnSignOut" class="button">Cerrar sesión</button>

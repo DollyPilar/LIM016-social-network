@@ -50,12 +50,12 @@ Para el diseño del prototipo inicial se empleó la herramienta Canva.
 * Vista Desktop
 *Timeline*
 <p align center> 
-<img width="200" height="200" src="src/img/canva1.png">
+<img width="350" height="500" src="src/img/canva1.png">
 </p>
 
 *Perfil de usuario*
 <p align center> 
-<img width="350" height="200" src="src/img/canva2.png">
+<img width="500" height="350" src="src/img/canva2.png">
 </p> 
 
 ### 4.2 Prototipo de alta fidelidad
@@ -64,12 +64,12 @@ Después de ya realizar el primer prototipo en Canva, procedimos a realizar el d
 * Vista Mobile
 *Welcome, login and register
 <p align center> 
-<img width="350" height="200" src="src/img/figma1.JPG">
+<img width="500" height="350" src="src/img/figma1.JPG">
 </p> 
 
 *Timeline and profile*
 <p align center> 
-<img width="350" height="200" src="src/img/figma2.JPG">
+<img width="500" height="350" src="src/img/figma2.JPG">
 </p> 
 
 ## 5.	Tecnologías empleadas
@@ -87,6 +87,6 @@ Después de ya realizar el primer prototipo en Canva, procedimos a realizar el d
 
 ## 7. Creadoras
 
-[Valeria Pizarro](https://github.com/ValPizarro)
-[Eliane Rivera](https://github.com/ElianeRiveraCastillo22)
-[Dolly Ochoa](https://github.com/DollyPilar) 
+* [Valeria Pizarro](https://github.com/ValPizarro)
+* [Eliane Rivera](https://github.com/ElianeRiveraCastillo22)
+* [Dolly Ochoa](https://github.com/DollyPilar) 

@@ -10,8 +10,8 @@ const welcome = () => {
             <h1>Queer Place</h1>
           </div>
 
-          <p> 
-          Somos una comunidad inclusiva donde podrás encontrar 
+          <p>
+          Somos una comunidad inclusiva donde podrás encontrar
           lugares seguros libres de discriminación.
           </p>
 
@@ -21,7 +21,7 @@ const welcome = () => {
           <button id="btnJoin" class="button">
           Únete a nuestra comunidad </button>
         </div>
-        <img class="imgWelcome" 
+        <img class="imgWelcome"
         src="./img/The Movement - Together.png" alt="img Welcome">
 
       </div>

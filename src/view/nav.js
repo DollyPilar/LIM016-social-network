@@ -19,7 +19,7 @@ const nav = () => {
       </div>
       <div class="tab">
         <i id="home" class="fas fa-home fasNav"></i>
-      </div>  
+      </div>
       <div class="tab">
         <i id="profile" class="fas fa-user fasNav"></i>
       </div>
