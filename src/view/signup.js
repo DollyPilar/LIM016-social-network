@@ -1,7 +1,6 @@
 import {createUser} from '../firebase/auth/auth_signup_password.js';
 import {googleAuth} from '../firebase/auth/auth_google_signin_popup.js';
 
-
 export const backSignIn = () => {
   window.location.hash = '#/signIn';
 };
@@ -41,6 +40,7 @@ const SignUp = () => {
   const btnChekIn = divElemt.querySelector('#btnCheckIn');
 
   btnChekIn.addEventListener('click', registerUserNew);
+
   divElemt
       .querySelector('#btnStartGoogle').addEventListener('click', googleAuth);
   divElemt.querySelector('#SignIn').addEventListener('click', backSignIn);

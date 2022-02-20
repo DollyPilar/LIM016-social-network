@@ -27,13 +27,7 @@ const changeView = (route) => {
       break;
     }
     case '#/profile': {
-      navegador.appendChild(components.nav());
       container.appendChild(components.profile());
-      break;
-    }
-    case '#/update': {
-      navegador.appendChild(components.nav());
-      container.appendChild(components.update());
       break;
     }
     case '#/signOut': {

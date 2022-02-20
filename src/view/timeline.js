@@ -3,8 +3,6 @@ import {
   onGetPosts,
   deletePost,
   getPost,
-  getPosts,
-  getPostByUser,
 } from '../firebase/firestore/firestore-add.js';
 import {updatePost, addLike} from '../firebase/firestore/fb-test.js';
 
@@ -29,9 +27,7 @@ const addPost = (e) => {
       .querySelector('#postDescription').value;
   postLike = [];
   const postDescriptionVerified = postDescription.replace(/\s+/g, '');
-  // console.log(postDescriptionVerified);
   const date = new Date();
-  // const postDate = date.toISOString();
 
   const postDate = date.getTime();
 
@@ -86,24 +82,9 @@ export const timeline = () => {
     if (postUser == null) {
       alert('Inicia sesión para disfrutar de nuestro contenido');
     } else {
-      const posts = await getPosts();
-      const postsData = posts.docs;
-      // console.log(posts);
-      console.log(postsData);
-
-      const postsByUser = await getPostByUser();
-      console.log(postsByUser);
-      const querySnapshot = await getPosts(postsByUser);
-      querySnapshot.forEach((doc) => {
-        if (postUser == doc.data().user) {
-          console.log(doc.id, ' => ', doc.data());
-        }
-      });
-
       await onGetPosts((callback) => {
         allPosts = '';
         callback.forEach((doc) => {
-          // console.log(doc.id);
           const likes = doc.data().like.length;
           if (likes == 0) {
             allLikes = '';
@@ -158,17 +139,13 @@ export const timeline = () => {
             const likeID = e.target.dataset.id;
             const doc = await getPost(likeID);
             const dataLikes = doc.data().like;
-            // console.log(dataLikes);
             const totalLikes = dataLikes;
-            // console.log(totalLikes);
 
             if (totalLikes.includes(postUser) == false) {
               totalLikes.push(postUser);
-              // console.log(totalLikesLength);
               await addLike(likeID, totalLikes);
             } else {
               const dislike = totalLikes.filter((user) => user !== postUser);
-              // console.log(dislike);
               await addLike(likeID, dislike);
             }
           });
@@ -237,7 +214,6 @@ export const timeline = () => {
               } else {
                 alert('ups, el campo esta vacio');
               }
-              // console.log(textAreaEdit.dataset.id, textAreaEdit.value);
             }
           });
         });

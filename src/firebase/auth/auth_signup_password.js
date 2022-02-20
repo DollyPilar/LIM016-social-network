@@ -5,23 +5,15 @@ import {
   updateProfile,
 } from '../configuraciones.js';
 import {showErrorRegister} from '../../view/signup.js';
-import {backSignIn} from '../../view/signup.js';
-import {saveUser} from '../firestore/firestore-add.js';
-import {onAuth} from './auth_state_listener.js';
-
 
 export const createUser = (email, password) => {
   return createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        const userID = userCredential.user.uid;
-        const displayName =userCredential.user.displayName;
         const email = userCredential.user.email;
-        const photoURL = userCredential.user.photoURL;
-        saveUser(displayName, email, photoURL, userID);
-        userVerification()
+
+        userVerification(email)
             .then(() => {
-              alert('Correo de verificación enviado');
-              backSignIn();
+              window.location.hash = '#/profile';
             });
       })
       .catch((error) => {
@@ -38,7 +30,9 @@ export const updateUserName = (name) => {
   return updateProfile(auth.currentUser, {
     displayName: name,
   }).then(() => {
-    onAuth();
+    alert('Verifica tu correo para disfrutar de nuestro contenido');
+
+    window.location.hash = '#/signIn';
   }).catch((error) => {
     console.error(error.code);
     alert('Lo sentimos, se ha producido un error');

@@ -11,6 +11,7 @@
 ## 1. Queer Place
 
 Queer Place es una red social que tiene como enfoque crear una comunidad inclusiva y libre de discriminación donde los usuarios puedan brindar y encontrar, por medio de publicaciones, recomendaciones acerca de lugares y servicios con las características mencionadas.
+
 ## 2. Estudio de usuario
 a) ¿Quiénes son los principales usuarios?
 Los principales usuarios son aquellas personas que buscan una comunidad segura donde encontrar recomendaciones.
@@ -23,7 +24,7 @@ b) ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
 *	Poder dar like, editar y eliminar un post
 *	Poder acceder a esta red social por medio del celular y no solo desde la pc o laptop.
 
-c) ¿Cuáles son las secciones más relevantes que quieren ver en la red social?  
+c) ¿Cuáles son las secciones más relevantes que quieren ver en la red social?
 *	Sección de publicaciones
 *	Edición de perfil
 *	Perfil de usuario
@@ -47,43 +48,43 @@ En base a los resultados obtenidos, diseñamos los siguientes prototipos:
 ### 4.1	Prototipo de baja fidelidad
 Para el diseño del prototipo inicial se empleó la herramienta Canva.
 
-* Vista Desktop
+* Vista Desktop <br>
 
-* *Timeline*
+*Timeline*
 <p align center> 
 <img width="500" height="350" src="src/img/canva1.png">
 </p>
 
 *Perfil de usuario*
-<p align center> 
+<p align center>
 <img width="500" height="350" src="src/img/canva2.png">
-</p> 
+</p>
 
+* Vista Mobile <br>
 
-* Vista Mobile
-
-* *Bienvenida y login
+*Bienvenida y login*
 <p align center> 
 <img width="500" height="350" src="src/img/canva3.png">
 </p> 
 
-* *Perfil de usuario
+*Perfil de usuario*
 <p align center> 
 <img width="500" height="350" src="src/img/canva4.png">
-</p> 
+</p>
+
 ### 4.2 Prototipo de alta fidelidad
 Después de ya realizar el primer prototipo en Canva, procedimos a realizar el diseño de la red social en una herramienta mucho más avanzada como Figma. Para esto tomamos en cuenta la paleta de colores y el diseño sugerido en las Historias de usuario.
 
-* Vista Mobile
+* Vista Mobile <br>
 
-* *Welcome, login and register
+*Welcome, login and register*
 <p align center> 
-<img width="350" height="500" src="src/img/figma1.JPG">
+<img width="250" height="380" src="src/img/figma1.JPG">
 </p> 
 
 * *Timeline and profile*
 <p align center> 
-<img width="350" height="500" src="src/img/figma2.JPG">
+<img width="250" height="380" src="src/img/figma2.JPG">
 </p> 
 
 ## 5.	Tecnologías empleadas
@@ -96,6 +97,7 @@ Después de ya realizar el primer prototipo en Canva, procedimos a realizar el d
 •	Eslint
 •	Jest
 </pre>
+
 ## 6. Producto final
 
 
@@ -103,4 +105,4 @@ Después de ya realizar el primer prototipo en Canva, procedimos a realizar el d
 
 * [Valeria Pizarro](https://github.com/ValPizarro)
 * [Eliane Rivera](https://github.com/ElianeRiveraCastillo22)
-* [Dolly Ochoa](https://github.com/DollyPilar) 
+* [Dolly Ochoa](https://github.com/DollyPilar)
