@@ -12,6 +12,7 @@ import {
 } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js';
 import {getFirestore, collection, getDocs, getDoc, addDoc, query, orderBy, onSnapshot, deleteDoc, doc, updateDoc, where} from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js';
 
+
 const firebaseConfig = {
   apiKey: 'AIzaSyCYMriyYLnj7mjwQ990OLhGaxulpUI6ONE',
   authDomain: 'queerplace-lim16.firebaseapp.com',
@@ -28,6 +29,7 @@ const auth = getAuth(app);
 const provider = new GoogleAuthProvider(app);
 // Init Services FireStore
 const db = getFirestore(app);
+// inizializacion de store
 
 export {
   // Authentication

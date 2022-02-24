@@ -4,7 +4,7 @@ import {
 } from '../../../src/firebase/firestore/fb-test.js';
 
 jest.mock('../../../src/firebase/configuraciones.js');
-
+jest.mock('../../../src/firebase/auth.js');
 
 // describe('savePost', () => {
 //   it('Guarda el post', async () => {
