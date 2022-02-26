@@ -12,7 +12,7 @@ const welcome = () => {
 
           <p>
           Somos una comunidad inclusiva donde podrás encontrar
-          lugares seguros libres de discriminación.
+          lugares seguros y libres de discriminación.
           </p>
 
         </div>
