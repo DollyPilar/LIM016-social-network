@@ -43,24 +43,28 @@ html{
   justify-content: center;
 }
 .SingUpBox, .updateBoX, .postBox{
-  background-color: white;
   border-radius: 8px ;
-  box-shadow: 0 2px 5px rgb(151 148 148 / 50%);
   width: 350px;
   max-width: 100%;
   overflow: hidden;
 }
+
+.update{
+  background-color: white;
+  box-shadow: 0 2px 5px rgb(151 148 148 / 50%);
+}
+
 .SingUpBox>p{
   font-family: 'Poppins', sans-serif;
   padding: 10px 10px;
   text-align: center;
   font-size: 4rem;
-  font-weight: bold;
 }
 .SingUpBox>h2{
-  font-family: 'Rubik', sans-serif;
-  font-size: 17px;
+  margin: 25px 0px 25px 0px;
   padding: 20px;
+  font-size: 20px;
+  font-family: 'Rubik', sans-serif;
 }
 .formLogIn, .formProfile{
   display: flex;
@@ -169,8 +173,8 @@ html{
   background-color: var(--color-7);
 }
 .imgWelcome{
-    height: 120px;
-    width: 150px;
+    height: 200px;
+    width: 250px;
 }
 .formRegister>p,.updateBoX>h2 {
   font-size: 15px;
@@ -185,8 +189,8 @@ html{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Clicker Script';
   margin-top: 15px;
+  font-family: 'Clicker Script', sans-serif;
 }
 .formRegister{
   padding: 0px 40px;
@@ -223,12 +227,12 @@ html{
   background-color: rgba(var(--b3f,250,250,250),1);
 }
 .recordTitle {
-  font-family: 'Clicker Script';
   font-size: 4rem;
   display: flex;
   margin: 12px 0px;
   justify-content: center;
   align-items: center;
+  font-family: 'Clicker Script', sans-serif;
 }
 .SingUpBox {
   display: flex;
@@ -273,10 +277,11 @@ html{
   }
 }
 .messageWelcome>p {
+  margin-bottom: 20px;
   font-size: 1.6rem;
   padding: 20px 50px;
   text-align: center;
-   font-family: 'Poppins', sans-serif; 
+  font-family: 'Poppins', sans-serif;
 }
 
 /*navegador*/
@@ -312,6 +317,7 @@ html{
   flex-direction: row;
   border-radius: 50px;
   cursor: pointer;
+  font-family: 'Clicker Script', sans-serif;
 }
 .tabTitle >p{
   font-size: 2.8rem;
@@ -320,14 +326,13 @@ html{
   align-items: center;
   justify-content: center;
   align-content: center;
-  font-family: 'Clicker Script';
 }
 .fasNav{
   color:#8662C7;
   font-size: 20px;
   transition: color .5s;
 }
-.fasNav{
+.fasNav:hover{
   color: #724BB7
 }
 
@@ -375,7 +380,7 @@ html{
   text-align: left;
   max-width: 90%;
   min-width: 90%;
-  height: 100%;
+  height: 90px;
   overflow: hidden;
   resize: none;
 }
@@ -415,7 +420,7 @@ html{
   display: flex;
   align-items: center;
   justify-content: center;
-  align-content: center; 
+  align-content: center;
 }
 .user{
   font-weight: bold;
@@ -453,9 +458,7 @@ html{
   color: #653CAD;
   height:100% ;
   width: 100%;
-  display: flex;
   align-items: center;
-  justify-content: center;
 }
 i.fas.fa-trash-alt.btnDelete.iconPost {
   display: flex;
@@ -524,6 +527,11 @@ i.fas.fa-pencil-alt.btnEdit.iconPost {
   .btnUpdate,.btnPhoto, .btnSave {
     font-size: 1.2rem;
   }
+  .SingUpBox, .updateBoX, .postBox{
+    background-color: white;
+    box-shadow: 0 2px 5px rgb(151 148 148 / 50%);
+  }
+
 }
 @media (min-width: 800px) {
   .containerPost {

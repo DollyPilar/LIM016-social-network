@@ -17,6 +17,8 @@ export const currentUser = (user, name, photo) => {
   postUser = user;
   userName = name;
   userPhoto = photo;
+
+  console.log(userPhoto);
 };
 currentUser();
 
@@ -59,7 +61,7 @@ export const timeline = () => {
     <textarea id="postDescription" class="postDescription"
     placeholder="¿Tienes alguna recomendación?" ></textarea>
     <div class="btnPost">
-      
+
       <button id="btnSave" class="btnSave">Publicar</button>
     </div>
 
@@ -204,7 +206,7 @@ export const timeline = () => {
             const textAreaEdit = divElemt.querySelector(
                 `[data-id="${btnUpdateID}"]`,
             );
-            const doc = await getPost(btnEditID);
+            const doc = await getPost();
             const dataUser = doc.data().user;
             const textEditVerified = textAreaEdit.value.replace(/\s+/g, '');
 

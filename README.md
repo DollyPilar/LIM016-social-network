@@ -97,7 +97,7 @@ Después de ya realizar el primer prototipo en Canva, procedimos a realizar el d
 *	Jest
 
 ## 6. Producto final
-#### *Bienvenida e inicio de sesión*
+### *Bienvenida e inicio de sesión*
 <p align center> 
 <img width="500" height="380" src="src/img/figma3.png">
 </p> 
